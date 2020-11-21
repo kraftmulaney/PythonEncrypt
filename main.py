@@ -30,6 +30,7 @@ def decrypt_message(ciphertext):
 
 keepRunning = True
 
+# Keep running until user enters 'q'
 while (keepRunning):
     mode = input("\nEncrypt or Decrypt or Generate key: ").lower()
 
