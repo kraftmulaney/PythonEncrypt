@@ -28,15 +28,20 @@ def decrypt_message(ciphertext):
     print(cleartext.decode())
 
 
-mode = input("Encrypt or Decrypt or Generate key: ").lower()
+keepRunning = True
 
-if (mode == 'e'):
-    message = input("Message: ")
-    encrypt_message(message)
-elif (mode == 'd'):
-    ciphertext = input("Ciphertext: ")
-    decrypt_message(ciphertext)
-elif (mode == 'g'):
-    generate_key()    
-else:
-    print("Not a valid input")
+while (keepRunning):
+    mode = input("\nEncrypt or Decrypt or Generate key: ").lower()
+
+    if (mode == 'e'):
+        message = input("Message: ")
+        encrypt_message(message)
+    elif (mode == 'd'):
+        ciphertext = input("Ciphertext: ")
+        decrypt_message(ciphertext)
+    elif (mode == 'g'):
+        generate_key()
+    elif (mode == 'q'):
+        keepRunning = False
+    else:
+        print("Not a valid input")
